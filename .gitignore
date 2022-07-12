@@ -1,0 +1,10 @@
+.vscode
+out
+/src - Copy**
+
+*.hxml
+!/extraParams.hxml
+/*.hx
+src/**/*.txt
+
+IniKeyValueFileAdapter.hx
