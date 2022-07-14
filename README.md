@@ -12,7 +12,7 @@ Conditionally compiled debug logs |
 <!-- More stable API (less breaking updates) | -->
 
 # Installation
-Install the haxelib `minecraft-api` and `hxjava`. There is no need to clone/download this repository.
+Install the haxelib `minecraft-api`. There is no need to clone/download this repository.
 
 # Usage
 Plugins written with this API require a special loader to run. Currently there is only a loader for Spigot which can be downloaded from [the Spigot resources page](). 
@@ -38,11 +38,11 @@ import nl.imfi_jz.minecraft_api.Gate;
 @:keep
 class TutorialGate implements Gate {
 
-	public function enable(plugin:Plugin) {
+    public function enable(plugin:Plugin) {
         trace('Hello world!');
     }
 
-	public function disable(plugin:Plugin) {
+    public function disable(plugin:Plugin) {
         trace('Goodbye!');
     }
 }
@@ -60,13 +60,15 @@ The plugins/HxMcPluginLoader folder is recommended because using the plugins fol
 
 Your plugin should now load and do its thing!
 
-For a more in depth tutorial please [watch my introduction video]() (COMING SOON).
+For a more in depth tutorial please [watch my introduction video](https://youtu.be/Y3j-8_2JHsI):
+
+[<img src="https://user-images.githubusercontent.com/10811551/178589130-afae30a2-2381-40aa-a237-fec2b4de12b7.png" width="250" border="1">](https://youtu.be/Y3j-8_2JHsI)
 
 # Showcase
 ## Blueprints
 Blueprints is a small plugin I made in Haxe that allows players to craft blueprints. Blueprints are a new item that contain a strucuture that can be place down multiple times at different locations. Below is a [demo video](https://www.twitch.tv/videos/1288999978) (it is a stream highlight, not an actual demonstration, so it is a bit scuffed).
 
-[![image](https://user-images.githubusercontent.com/10811551/178467976-5876331d-a9ea-4440-a2fc-8818a14a2714.png)](https://www.twitch.tv/videos/1288999978)
+[<img src="https://user-images.githubusercontent.com/10811551/178467976-5876331d-a9ea-4440-a2fc-8818a14a2714.png" width="250" border="1">](https://www.twitch.tv/videos/1288999978)
 
  I'm planning to make the source code available for reference and learning purposes.
 
@@ -75,10 +77,10 @@ Blueprints is a small plugin I made in Haxe that allows players to craft bluepri
 There is also a in progress plugin I am working on to add machine learning to the monster's AI. The source code for that is currently closed but there are some clips of a prototype version on [my Twitch channel](https://twitch.com/jokerzappie). <!-- available but should not be used, modified or distributed. -->
 
 # Contributions
-Currently the loader is closed source. However, if you find issues using the API, it does not work as described or if you want to suggest changes/additions to it, feel free to make an issue or a pull request for it on the repository.
+Currently the loader is closed source. However, if you find issues using the API, it does not work as described or if you want to suggest changes/additions to it, feel free to [make an issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or a pull request for it on the repository.
 
 ## Contact / share your work
-Feel free to share things you made using this API. Currently I do not have a specific way for you to contact me directly but you can try any platform I am on lol.
+Feel free to [share things you made using this API](https://github.com/imfi-jz/hx-mc-api/discussions/categories/show-and-tell). Currently I do not have a specific way for you to contact me directly but [check out the discussions](https://github.com/imfi-jz/hx-mc-api/discussions) or try any platform I am on lol.
 
 # License
 Apache 2.0 (see LICENSE.txt)
