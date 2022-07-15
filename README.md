@@ -15,7 +15,7 @@ Conditionally compiled debug logs |
 Install the haxelib `minecraft-api`. There is no need to clone/download this repository.
 
 # Usage
-Plugins written with this API require a special loader to run. Currently there is only a loader for Spigot which can be downloaded from [the Spigot resources page](). 
+Plugins written with this API require a special loader to run. Currently there is only a loader for Spigot which can be downloaded from [the Spigot resources page](https://www.spigotmc.org/resources/haxe-plugin-loader.103369/history). 
 
 Before you can start writing code you need a hxml file that contains instructions for Haxe to compile your code. Create for example `build.hxml` and add the following content to it:
 
@@ -78,6 +78,8 @@ There is also a in progress plugin I am working on to add machine learning to th
 
 # Contributions
 Currently the loader is closed source. However, if you find issues using the API, it does not work as described or if you want to suggest changes/additions to it, feel free to [make an issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or a pull request for it on the repository.
+
+This is my first big public project so advice is welcome.
 
 ## Contact / share your work
 Feel free to [share things you made using this API](https://github.com/imfi-jz/hx-mc-api/discussions/categories/show-and-tell). Currently I do not have a specific way for you to contact me directly but [check out the discussions](https://github.com/imfi-jz/hx-mc-api/discussions) or try any platform I am on lol.
