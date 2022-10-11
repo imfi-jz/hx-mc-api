@@ -12,15 +12,15 @@ Conditionally compiled debug logs |
 <!-- More stable API (less breaking updates) | -->
 
 # Installation
-Install the haxelib `minecraft-api`. There is no need to clone/download this repository.
+Install the haxelib `minecraft-api`. There is no need to clone/download this repository. To install the library [download and install Haxe](https://haxe.org/download/) and run the command `haxelib install minecraft-api` in a command prompt/terminal.
+
+Plugins written with this API require a special loader to run. Currently there is only a loader for Spigot. Follow [the official instructions to install a Spigot server](https://www.spigotmc.org/wiki/buildtools/) or download it elsewhere. Then [download the beforementioned loader](https://www.spigotmc.org/resources/haxe-plugin-loader.103369/history) and put it in the plugins folder inside your Spigot server.
 
 # Usage
-Plugins written with this API require a special loader to run. Currently there is only a loader for Spigot which can be downloaded from [the Spigot resources page](https://www.spigotmc.org/resources/haxe-plugin-loader.103369/history). 
-
 Before you can start writing code you need a hxml file that contains instructions for Haxe to compile your code. Create for example `build.hxml` and add the following content to it:
 
 ```ini (hxml)
--lib minecraft-api
+--library minecraft-api
 
 # If your source code is placed in ./src
 --class-path src
@@ -47,12 +47,11 @@ class TutorialGate implements Gate {
     }
 }
 ```
+I recommend putting your source code in a folder called src, followed by subfolders of your namespace. For example `src/nl/imfi_jz/api_tutorial`. In there you would create the file `TutorialGate.hx` with the above content.
 
-I recommend putting your source code in a folder called src, followed by subfolders of your namespace. For example `src/nl/imfi_jz/api_tutorial`.
+Now you can compile your code with the command `haxe build.hxml`. Your plugin will appear in the same directory, named `HxMcPlugin.jar`. Make sure you have the loader jar file in your server's plugin directory. Move your plugin jar file into either the `plugins` or `plugins/HxMcPluginLoader` folder. 
 
-Now you can compile your code with the command `haxe build.hxml`. Your plugin will appear in the same directory, named HxMcPlugin.jar. Make sure you have the loader jar file in your server's plugin directory. Move your plugin jar file into either the plugins or plugins/HxMcPluginLoader folder. 
-
-The plugins/HxMcPluginLoader folder is recommended because using the plugins folder will cause the server to throw an error because the Haxe plugins do not have a plugin.yml file. The plugin will however load regardless.
+The `plugins/HxMcPluginLoader` folder is recommended. Using the `plugins` folder will cause the server to throw an error because the Haxe plugins do not have a plugin.yml file. However, your plugin will load regardless.
 
 ![Haxe MC plugin loader destination folder](https://user-images.githubusercontent.com/10811551/176917171-18e00613-75e1-477d-b8db-d2dfe3aaaf9c.png)
 
@@ -74,10 +73,10 @@ Blueprints is a small plugin I made in Haxe that allows players to craft bluepri
 
 ## Machine learning AI
 
-There is also a in progress plugin I am working on to add machine learning to the monster's AI. The source code for that is currently closed but there are some clips of a prototype version on [my Twitch channel](https://twitch.com/jokerzappie). <!-- available but should not be used, modified or distributed. -->
+There is also a in progress plugin I am working which adds machine learning to the monster's AI. The source code for that is currently closed and there is no proper video on it, but there are some clips of a prototype version on [my Twitch channel](https://twitch.com/jokerzappie). <!-- available but should not be used, modified or distributed. -->
 
 # Contributions
-Currently the loader is closed source. However, if you find issues using the API, it does not work as described or if you want to suggest changes/additions to it, feel free to [make an issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or a pull request for it on the repository.
+Currently the loader is closed source. However, feel free to make suggestions for changes/additions [on the discussions section](https://github.com/imfi-jz/hx-mc-api/discussions). If you find issues using the API, it does not work as described, feel free to [make an issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or a pull request for it on the repository.
 
 This is my first big public project so advice is welcome.
 
@@ -86,3 +85,8 @@ Feel free to [share things you made using this API](https://github.com/imfi-jz/h
 
 # License
 Apache 2.0 (see LICENSE.txt)
+
+# Support
+This project is free to use as stated by the license. If you would like to support this project you can [donate to the developer](https://www.paypal.com/donate/?hosted_button_id=TZRUV2B66PZKQ).
+
+[![QR code to donate](https://panels.twitch.tv/panel-28008197-image-30c20ce1-8c4c-455a-9f74-950cdf9ead76)](https://www.paypal.com/donate/?hosted_button_id=TZRUV2B66PZKQ)
