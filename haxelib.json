@@ -2,7 +2,7 @@
   "name": "minecraft-api",
   "url" : "https://github.com/imfi-jz/hx-mc-api/",
   "license": "Apache",
-  "tags": ["java", "minecraft", "mc", "spigot", "server"],
+  "tags": ["java", "minecraft", "mc", "spigot", "server", "api"],
   "description": "This library provides an API to create Minecraft plugins for Java Edition Spigot servers. The plugins written in Haxe run using a special loader plugin for Spigot that can be downloaded for free.",
   "version": "0.1.0-alpha",
   "classPath": "src/",
