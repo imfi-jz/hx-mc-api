@@ -19,13 +19,13 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
- - Minecraft/Spigot version [e.g. 1.19]
- - Haxe version [e.g. 4.2.0]
- - API Build Number [e.g. 40]
- - Loader version [e.g. a0.1]
- - Plugin versions (in case of incompatible plugins)
- - Java version
+**Desktop (please add the information you know):**
+ - Minecraft/Spigot version: [e.g. 1.19]
+ - Haxe version: [e.g. 4.2.0]
+ - API Build Number: [e.g. 40]
+ - Loader version: [e.g. a0.1]
+ - Plugin versions: (in case of incompatible plugins)
+ - Java version: 
  - OS: [e.g. Windows]
 
 **Additional context**
