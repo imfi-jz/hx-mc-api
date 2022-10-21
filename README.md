@@ -61,15 +61,15 @@ Your plugin should now load and do its thing!
 
 For a more in depth tutorial please [watch my introduction video](https://youtu.be/Y3j-8_2JHsI):
 
-[<img src="https://user-images.githubusercontent.com/10811551/178589130-afae30a2-2381-40aa-a237-fec2b4de12b7.png" width="250" border="1">](https://youtu.be/Y3j-8_2JHsI)
+[<img alt="Thumbnail" src="https://user-images.githubusercontent.com/10811551/178589130-afae30a2-2381-40aa-a237-fec2b4de12b7.png" width="320" border="1">](https://youtu.be/Y3j-8_2JHsI)
 
 # Showcase
-## Blueprints
-Blueprints is a small plugin I made in Haxe that allows players to craft blueprints. Blueprints are a new item that contain a strucuture that can be place down multiple times at different locations. Below is a [demo video](https://www.twitch.tv/videos/1288999978) (it is a stream highlight, not an actual demonstration, so it is a bit scuffed).
+## Custom Blueprints
+Custom Blueprints is a small plugin I made in Haxe that allows players to craft blueprints. Blueprints are a new item that contain a strucuture that can be placed down multiple times at different locations. See it in action in this [showcase video](https://youtu.be/O6vdADBGdGM):
 
-[<img src="https://user-images.githubusercontent.com/10811551/178467976-5876331d-a9ea-4440-a2fc-8818a14a2714.png" width="250" border="1">](https://www.twitch.tv/videos/1288999978)
+[<img alt="Thumbnail" src="https://user-images.githubusercontent.com/10811551/197231452-03175580-62ee-44c6-b4e1-61f91d8dc063.png" width="320" border="1">](https://youtu.be/O6vdADBGdGM)
 
- I'm planning to make the source code available for reference and learning purposes.
+Learn more & download the plugin on [the Spigot page](https://www.spigotmc.org/resources/custom-blueprints.105864/). Also [the source code](https://github.com/imfi-jz/CustomBlueprints) is publicly available for reference / learning purposes. Feel free to browse around!
 
 ## Machine learning AI
 
@@ -81,7 +81,7 @@ Currently the loader is closed source. However, feel free to make suggestions fo
 This is my first big public project so advice is welcome.
 
 ## Contact / share your work
-Feel free to [share things you made using this API](https://github.com/imfi-jz/hx-mc-api/discussions/categories/show-and-tell). Currently I do not have a specific way for you to contact me directly but [check out the discussions](https://github.com/imfi-jz/hx-mc-api/discussions) or try any platform I am on lol.
+Feel free to [share things you made using this API](https://github.com/imfi-jz/hx-mc-api/discussions/categories/show-and-tell). [Join my Discord server](https://discord.gg/2KedGjpQMR) to easily get in touch or [check out the discussions](https://github.com/imfi-jz/hx-mc-api/discussions).
 
 # License
 Apache 2.0 (see LICENSE.txt)
