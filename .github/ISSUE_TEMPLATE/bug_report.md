@@ -20,12 +20,12 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please add the information you know):**
+ - API version: [e.g. 0.1.0-alpha]
+ - Loader version: [e.g. a0.1]
  - Minecraft/Spigot version: [e.g. 1.19]
  - Haxe version: [e.g. 4.2.0]
- - API Build Number: [e.g. 40]
- - Loader version: [e.g. a0.1]
  - Plugin versions: (in case of incompatible plugins)
- - Java version: 
+ - Java version: [e.g. 17.0.4]
  - OS: [e.g. Windows]
 
 **Additional context**
