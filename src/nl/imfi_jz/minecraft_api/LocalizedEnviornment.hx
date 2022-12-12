@@ -1,6 +1,6 @@
 package nl.imfi_jz.minecraft_api;
 
-/** An interface to access information about the environment at a certain location. **/
+/** Information about the environment at a specific location. **/
 interface LocalizedEnviornment extends Categorized {
     function getCoordinates():ThreeDimensional;
     /** Gets the humidity from 0 to 1. **/
