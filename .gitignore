@@ -1,6 +1,7 @@
 .vscode
 out
 /src - Copy**
+releases
 
 *.hxml
 !/extraParams.hxml
