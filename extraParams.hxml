@@ -2,6 +2,8 @@
 
 --dce full
 
+-D warn
+
 --java mc_api_temp/HxMcPlugin
 
 #--cmd mkdir bin

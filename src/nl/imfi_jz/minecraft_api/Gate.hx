@@ -8,7 +8,7 @@ import nl.imfi_jz.minecraft_api.Logger;
 import nl.imfi_jz.minecraft_api.Recipe.ShapedRecipe;
 import nl.imfi_jz.minecraft_api.Recipe.ShapelessRecipe;
 
-/** Both the entrypoint and exit point of this plugin. **/
+/** Both the entrypoint and exit point of this plugin. Don't forget to add @:keep to your implementation. **/
 //@:keepSub
 interface Gate {
     /** Called when this plugin gets enabled. Typically when the server starts or gets reloaded. **/
@@ -60,10 +60,14 @@ interface Plugin extends Named {
     /** Returns a `Scheduler` for this server/game. **/
     function getScheduler():Scheduler;
 
-    /** Returns a collection of all other Haxe plugins loaded in this server/game. Currently only the name of the other plugins can be obtained. However, Haxe plugins can communicate through `SharedPluginMemory`. **/
-    function getOtherLoadedPlugins():StandardCollection<Named>;
-    /** Returns the shared memory for Haxe plugins on this server/game. **/
+    /** Returns the shared memory for Haxe and Spigot plugins on this server/game. **/
     function getSharedPluginMemory():SharedPluginMemory;
+    /** Returns a collection of all other non-Haxe (Spigot) plugins loaded in this server/game. The preferred way of plugin-to-plugin communication is through `SharedPluginMemory`. Native Spigot plugins can also access this. **/
+    function getOtherLoadedPlugins():StandardCollection<Dynamic>;
+    /** Returns a collection of all other Haxe plugins loaded in this server/game. The preferred way of plugin-to-plugin communication is through `SharedPluginMemory`. **/
+    function getOtherLoadedHaxePlugins():StandardCollection<Plugin>;
+    /** Gets the version of the Haxe Plugin Loader the plugin is currently loaded by, in semantic version format (a0.1 equals to 0.1.0-alpha). **/
+    function getLoaderVersion():SemanticVersion;
 }
 
 /** Registers actions to specific in-game triggers like events or commands. **/
@@ -125,6 +129,14 @@ interface FileSystemManager {
         Note that `subfolders` is an Array containing each subfolder name as a separate `String`, omitting the need to use path saparator characters.
     **/
     function getYmlFile(name:String, ?subfolders:Array<String>, ?headerComment:String, autoSaves:Bool = true):NestableKeyValueFile<Any>;
+    #if(IniFiction)
+    /**
+        Returns access to an INI file which will be saved as `name`.ini in the "data folder" (obtained via `getDataFolderPath`) and optionally any `subfolders`. `headerComment` is an optional comment that will be placed at the first line of the file. `autoSaves` determines whether the file should automatically save after a value has been set.
+    
+        Note that `subfolders` is an Array containing each subfolder name as a separate `String`, omitting the need to use path saparator characters.
+    **/
+    function getIniFile(name:String, ?subfolders:Array<String>, ?headerComment:String, autoSaves:Bool = true):KeyValueFile<String>;
+    #end
 }
 
 /** An interface to schedule functions (or tasks) to execute later. **/

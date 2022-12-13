@@ -49,8 +49,10 @@ interface EventData {
     /** Enum values, converted to `String`s, involved in an in-game event. **/
     function getEnumValues():ReadOnlyArray<String>;
 
-    /** Unsafe access to execute any special method this event may have, specified by `functionName`, with optional `arguments`. Only use this if the other functions of `EventData` do not suffice. See the Spigot documentation for the methods available for the event you are working with. Return values may be cast to the value type you expect from this method. **/
+    /** Unsafe access to execute any specific method this event may have, specified by `functionName`, with optional `arguments`. Only use this if the other functions of `EventData` do not suffice. See the Spigot documentation for the methods available for the event you are working with. Return values may be cast to the value type you expect from this method. **/
     function tryExecute<T>(functionName:String, ?arguments:StandardCollection<Any>):T;
+    /** Unsafe access to execute any specific method or field this event may have via a Dynamic object. Only use this if the other functions of `EventData` do not suffice. See the Spigot documentation for the methods available for the event you are working with. **/
+    function asDynamic():Dynamic;
 }
 
 interface Handler {

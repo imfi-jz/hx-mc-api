@@ -6,7 +6,8 @@ import nl.imfi_jz.minecraft_api.GameObject.Item;
 /** An inventory storing a fixed amount of items. Each item is stored at a specific slot. Slots are identified by a number. **/
 interface Inventory extends Displayable {
     /** Returns an array containing the slot numbers of all slots that containt an item in this inventory. **/
-    function occupiedSlots():ReadOnlyArray<Int>;
+    function getOccupiedSlots():ReadOnlyArray<Int>;
+    @:deprecated('Since 0.2.x-alpha') function occupiedSlots():ReadOnlyArray<Int>;
 
     /** Gets the total amount of slots this inventory has. **/
     function getSlotCount():Int;
@@ -35,6 +36,7 @@ interface Equipment extends Inventory {
 }
 
 /** An `Inventory` that has special slots that may transform certain items to a new item (e.g. crafting, cooking, enchanting). This usually represents a smaller part of an in-game inventory. **/
+@:deprecated('Not yet implemented')
 interface Workspace extends Inventory {
     //function inputSlots():Iterator<Int>;
     /** The inventory slot that reserved for output of some item transformation. **/

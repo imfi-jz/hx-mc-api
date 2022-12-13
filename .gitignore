@@ -6,5 +6,3 @@ out
 !/extraParams.hxml
 /*.hx
 src/**/*.txt
-
-IniKeyValueFileAdapter.hx

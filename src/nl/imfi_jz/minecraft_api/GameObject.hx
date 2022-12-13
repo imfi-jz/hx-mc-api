@@ -1,7 +1,7 @@
 package nl.imfi_jz.minecraft_api;
 
 import nl.imfi_jz.minecraft_api.DataHolder;
-import nl.imfi_jz.minecraft_api.Breakable;
+import nl.imfi_jz.minecraft_api.Damageable;
 import nl.imfi_jz.minecraft_api.TypeDefinitions;
 import nl.imfi_jz.minecraft_api.Mountable.MountRider;
 import nl.imfi_jz.minecraft_api.PotionEffect.PotionEffectable;
@@ -9,12 +9,12 @@ import nl.imfi_jz.minecraft_api.Inventory;
 import nl.imfi_jz.minecraft_api.Named.Namable;
 
 /** Anything that has a place in the game. `GameObject` itself is unspecific as to what it is but forms a base for more specific in-game objects. **/
-interface GameObject extends Named extends Namable extends SerialDataHolder<String> extends InventoryHolder extends Breakable extends Movable extends Removable extends SoundEmitter extends Identifiable extends Placed extends Gravitable extends Comparable extends Categorized {
+interface GameObject extends Named extends Namable extends SerialDataHolder<String> extends InventoryHolder extends Damageable extends Breakable extends Movable extends Removable extends SoundEmitter extends Identifiable extends Placed extends Gravitable extends Comparable extends Categorized {
 
 }
 
 /** Anything a player may encounter, usually a mob. **/
-interface Encounter extends GameObject extends PotionEffectable extends Mountable extends MountRider extends PropertyHolder<Any> {
+interface Encounter extends GameObject extends EncounterDamageable extends PotionEffectable extends Mountable extends MountRider extends PropertyHolder<Any> {
     /** Returns the associated AI options for this encounter. **/
     function getAiConfiguration():AiControlable;
 }
@@ -36,7 +36,7 @@ interface Player extends Encounter extends MessageReceiver {
     /** Gets the level of permissions this player has. **/
     @:deprecated('API may change.')
     function getPermissionLevel():Int;
-    /** Gets the experience level this player currently has. The level is expressed by the number above the decimal and progress to the next level is expressed by the number below the decimal. **/
+    /** Gets the experience level this player currently has. The level is expressed by the number before the decimal and progress to the next level is expressed by the number after the decimal. **/
     function getExperienceLevel():Float;
 }
 
