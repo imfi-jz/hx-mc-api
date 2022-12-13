@@ -1,10 +1,10 @@
-# Minecraft API for [Haxe](https://haxe.org/)
-This is an API that will allow you to write plugins for Minecraft in Haxe. At this time "plugins" means, a plugin for a **Spigot** server. However in the future this might also include forge/fabric. 
+# Haxe Minecraft API
+This is an API that will allow you to write plugins for Minecraft in [Haxe](https://haxe.org/). At this time "plugins" means, a plugin for a **Spigot** server. However in the future this might also include forge/fabric. 
 
-Here are some pros and cons for using this API compared to the official Spigot API:
+Here are some pros and cons using this API compared to the official Spigot API:
 ✅ Pros | ❎ Cons
 ---|---
-Easy to understand and use | New API to learn
+Simple functions / easy to use | New API to learn
 All Haxe language features | Limited features
 Automatically multi-threaded (plugins will never lag the server) | Requires a loader (included)
 Plugin to plugin communication/events | Patches to game updates might be delayed
@@ -28,7 +28,7 @@ Before you can start writing code you need a hxml file that contains instruction
 your.full.namespace
 ```
 
-The minimum requirement for a Haxe Minecraft plugin to load is a class that implements the `Gate` interface. 
+The minimum requirement for a Haxe Minecraft plugin to load is a class that implements the `Gate` interface. Don't forget to add `@:keep` to it, to allow compilatoin with [dead code elimination](https://haxe.org/manual/cr-dce.html).
 
 ```haxe
 package nl.imfi_jz.api_tutorial;
@@ -75,18 +75,20 @@ Learn more & download the plugin on [the Spigot page](https://www.spigotmc.org/r
 
 There is also a in progress plugin I am working which adds machine learning to the monster's AI. The source code for that is currently closed and there is no proper video on it, but there are some clips of a prototype version on [my Twitch channel](https://twitch.com/jokerzappie). <!-- available but should not be used, modified or distributed. -->
 
-# Contributions
-Currently the loader is closed source. However, feel free to make suggestions for changes/additions [on the discussions section](https://github.com/imfi-jz/hx-mc-api/discussions). If you find issues using the API, it does not work as described, feel free to [make an issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or a pull request for it on the repository.
+# Contributions & contact
+Currently the loader is closed source. However, feel free to make suggestions for changes/additions [on the discussions section](https://github.com/imfi-jz/hx-mc-api/discussions). If you run into issues using the API feel free to [report the issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or make a pull request on the repository.
 
 This is my first big public project so advice is welcome.
 
-## Contact / share your work
-Feel free to [share things you made using this API](https://github.com/imfi-jz/hx-mc-api/discussions/categories/show-and-tell). [Join my Discord server](https://discord.gg/2KedGjpQMR) to easily get in touch or [check out the discussions](https://github.com/imfi-jz/hx-mc-api/discussions).
+## Contact / get support / share your work
+Feel free to [share things you made using this API](https://github.com/imfi-jz/hx-mc-api/discussions/categories/show-and-tell). [Join my Discord server](https://discord.gg/2KedGjpQMR) to easily get in touch or get support. You can also [check out the discussions](https://github.com/imfi-jz/hx-mc-api/discussions).
 
-# License
-Apache 2.0 (see LICENSE.txt)
+[<img alt="QR code to join the Discord" src="https://user-images.githubusercontent.com/10811551/206906483-77755f2f-0e19-4e22-9274-449d083a3b77.png" width="320">](https://discord.gg/2KedGjpQMR)
 
-# Support
+## Support
 This project is free to use as stated by the license. If you would like to support this project you can [donate to the developer](https://www.paypal.com/donate/?hosted_button_id=TZRUV2B66PZKQ).
 
 [![QR code to donate](https://panels.twitch.tv/panel-28008197-image-30c20ce1-8c4c-455a-9f74-950cdf9ead76)](https://www.paypal.com/donate/?hosted_button_id=TZRUV2B66PZKQ)
+
+# License
+Apache 2.0 (see LICENSE.txt).
