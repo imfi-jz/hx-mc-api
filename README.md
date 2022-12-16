@@ -69,11 +69,15 @@ Custom Blueprints is a small plugin I made in Haxe that allows players to craft 
 
 [<img alt="Thumbnail" src="https://user-images.githubusercontent.com/10811551/197231452-03175580-62ee-44c6-b4e1-61f91d8dc063.png" width="320" border="1">](https://youtu.be/O6vdADBGdGM)
 
-Learn more & download the plugin on [the Spigot page](https://www.spigotmc.org/resources/custom-blueprints.105864/). Also [the source code](https://github.com/imfi-jz/CustomBlueprints) is publicly available for reference / learning purposes. Feel free to browse around!
+Learn more & download the plugin on [the Spigot page](https://www.spigotmc.org/resources/custom-blueprints.105864/). Also the [source code](https://github.com/imfi-jz/CustomBlueprints) is publicly available for reference / learning purposes. Feel free to browse around!
 
 ## Machine learning AI
-
 There is also a in progress plugin I am working which adds machine learning to the monster's AI. The source code for that is currently closed and there is no proper video on it, but there are some clips of a prototype version on [my Twitch channel](https://twitch.com/jokerzappie). <!-- available but should not be used, modified or distributed. -->
+
+## Hardcore Lightly
+Hardcore Lightly is a simple plugin that makes players lose a portion of their max health each time they die. When a player runs out of hearts, they are put into spectator mode. This way players get punished for dying and have a limited number of lives.
+
+The plugin can be downloaded [from Spigot](https://www.spigotmc.org/resources/hardcore-lightly.106732/) and has its [source code](https://github.com/imfi-jz/HardcoreLightly) publicly available.
 
 # Contributions & contact
 Currently the loader is closed source. However, feel free to make suggestions for changes/additions [on the discussions section](https://github.com/imfi-jz/hx-mc-api/discussions). If you run into issues using the API feel free to [report the issue](https://github.com/imfi-jz/hx-mc-api/issues/new/choose) or make a pull request on the repository.
