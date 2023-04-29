@@ -27,6 +27,15 @@ interface Game {
     function getDisplayableMessageBuilder():DisplayableMessageBuilder;
     /** The current game's difficulty. **/
     function getDifficulty():Difficulty;
+    /**
+        Run any command known to the game, including commands registered by plugins.
+        
+        Returns the console's response, where each console line after execution is a new `String` in the returned collection.
+        
+        Beware that the console can concurrently output lines that are not related to the executed command. Always check all lines for the content you expect.
+        In some cases the command runs asynchronously and the console output is sent after the function returns. We cannot wait for completion of asynchronous functions we don't know about, so to help obtain the correct output, `secondsToWaitForConsole` can be used to specify an amount of seconds to wait after the command is called. All console output during this time will populate the returned collection.
+    **/
+    function executeCommand(commandName:String, ?arguments:StandardCollection<String>, secondsToWaitForConsole:Float = 0):StandardCollection<String>;
 }
 
 /** Represends a game difficulty. **/
@@ -147,6 +156,15 @@ interface Scheduler {
         Except for very specific cases, this should never be neccessary, as each code trigger (event, command, etc.) is automatically ran on a different thread.
     **/
     function executeInParallel(fun:()->Void):Void;
+    /* Execute a loop with primitive `Int`s and `Float`s on the GPU. Access the result back on the CPU in `result`. This requires OpenCL to be installed on the system, otherwise it will run on CPU anyway. */
+    // aparapi does not seem to support my GPUs (AMD 6800 and Intel UHD 630) stating the new instructions are not supported
+    /* function executeIterationInParallelOnGpu(
+        iterations:Int,
+        ?integers:Vector<Vector<Int>>,
+        ?floats:Vector<Vector<Float>>,
+        onGpu:(iteration:Int)->Void,
+        ?withResultOnCpu:()->Void
+    ):Void; */
     /** Execute function `fun` as soon as possible potentially slowing down the server. Essentially on the main/server thread. **/
     function executeSequentially(fun:()->Void):Void;
     /** Executes function `fun` after set `seconds`. This will respect the context it is fired from meaning not block the main/server thread and not blocking the current (scheduling) function. **/

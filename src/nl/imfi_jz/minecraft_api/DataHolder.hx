@@ -1,6 +1,6 @@
 package nl.imfi_jz.minecraft_api;
 
-/** A persistent data holder mapping values at `String` keys. Values set will be available even after a server restart. **/
+/** A persistent data holder mapping values at `String` keys. Values set will be available even after a server restart. Certain key-value combinations may change the behaviour of the holder. **/
 interface SerialDataHolder<T> {
     /** Retrieve the value set at `key`. Returns `null` when no value was set or the value had been set to `null`. **/
     function getValue(key:String):T;

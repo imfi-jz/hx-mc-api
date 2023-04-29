@@ -16,7 +16,10 @@ interface ConstructingGameObjectFactory extends GameObjectFactory {
 
 /** `Item` factory that creates `Item`s which are not directly added into the game. **/
 interface ConstructingItemFactory extends ConstructingGameObjectFactory {
-    /** Create a standard `GameObject` based on a given `name`. `name` is case insensitive and can match partially. **/
+    /**
+        Create a standard `GameObject` based on a given material `name`, or name can be used as input the same way Minecraft's /give command works.
+        If `name` is just a material it is case insensitive and can match partially.
+    **/
     function createGameObject(name:String):Item;
 }
 
@@ -28,7 +31,10 @@ interface SpawningGameObjectFactory extends GameObjectFactory {
 
 /** `Item` factory that creates `Item`s which are directly spawned at a location in a world. **/
 interface SpawningItemFactory extends SpawningGameObjectFactory {
-    /** Spawns and returns a standard `Item` based on a given `name` at given `coordinates`. `name` is case insensitive and can match partially. **/
+    /**
+        Spawns and returns a standard `Item` based on a given material `name`, or name can be used as input the same way Minecraft's /give command works. The item will spawn at given `coordinates`.
+        If `name` is just a material it is case insensitive and can match partially.
+    **/
     function spawnGameObject(name:String, coordinates:ThreeDimensional):Item;
 }
 

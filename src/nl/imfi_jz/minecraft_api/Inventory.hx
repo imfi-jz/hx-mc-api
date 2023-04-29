@@ -22,10 +22,14 @@ interface Inventory extends Displayable {
     /** Change the item at `slot` to `item`. Returns whether or not the item has changed successfully. **/
     function setItem(slot:Int, item:Item):Bool;
     /** Returns the item present at `slot`. Use `getQuantity` to see the amount of an item at a slot. **/
-    function getItem(slot:Int):Item;
+    function getItem(slot:Int):Null<Item>;
 }
 
-/** An interface to get the slot numbers of special "equipment" slots. This usually represents a smaller part of an in-game inventory. **/
+/**
+    An interface to get the slot numbers of special "equipment" slots. This usually represents a smaller part of an in-game inventory.
+
+    Beware that these functions will only return the correct slot numbers for `Equipment` inventories. While the normal inventory obtained via `InventoryHolder.getInventory()` usually also contains the equipment slots, slot numbers differ between different inventory types.
+**/
 interface Equipment extends Inventory {
     function getHelmetSlot():Int;
     function getChestplateSlot():Int;
