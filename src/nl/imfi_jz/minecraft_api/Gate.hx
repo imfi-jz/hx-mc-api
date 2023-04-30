@@ -178,7 +178,7 @@ interface SharedMemory<T> {
     /**
         Sets the value at `key` to `value`. Using null as `value` removes the key.
 
-        It is highly recommended that when you set a value to an unused key, you document why what other plugins can and should not do with it.
+        It is highly recommended that when you set a value to an unused key, you document what other plugins can and should not do with it.
     **/
     function setValue(key:String, value:Null<T>):Void;
 
