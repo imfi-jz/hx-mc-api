@@ -4,9 +4,9 @@
   "license": "Apache",
   "tags": ["java", "minecraft", "mc", "spigot", "server", "api", "plugin"],
   "description": "This library provides an API to create Minecraft plugins for Java Edition Spigot servers. The plugins written in Haxe run using a special loader plugin for Spigot that can be downloaded for free.",
-  "version": "0.2.69-alpha",
+  "version": "0.3.82-alpha",
   "classPath": "src/",
-  "releasenote": "Ini file support, minor API changes, increased backwards compatibility minecraft version range. See GitHub for the full release notes.",
+  "releasenote": "Improved ItemFactory, added Game.executeCommand and more. See GitHub for the full release notes.",
   "contributors": ["imfi-jz"],
   "dependencies": {
     "hxjava": "",
