@@ -4,8 +4,4 @@
 
 -D warn
 
---java mc_api_temp/HxMcPlugin
-
-#--cmd mkdir bin
---cmd move /y "mc_api_temp\HxMcPlugin\HxMcPlugin.jar" "HxMcPlugin.jar"
---cmd rmdir /s /q "mc_api_temp"
+--java bin/HxMcPlugin
